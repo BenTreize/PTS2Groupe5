@@ -66,6 +66,10 @@ public class appliController {
 	private TextArea aide;
 	@FXML
 	private TextArea texte;
+	@FXML
+	private Label txtnbtps;
+	@FXML
+	private Label txtnbincomplet;
 	
 	public void choixVideoBtn(ActionEvent event) {
 
@@ -174,5 +178,26 @@ public class appliController {
 		String localFinal = local.toString();
 		return localFinal;
 
+	}
+	public void modeEnt(ActionEvent event) {
+		tps.setDisable(true);
+		nbtps.setDisable(true);
+		txtnbtps.setDisable(true);
+		incomplet.setDisable(false);
+		nbincomplet.setDisable(false);
+		txtnbincomplet.setDisable(false);
+		nbdecouvert.setDisable(false);
+		solution.setDisable(false);		
+	}
+	
+	public void modeEva(ActionEvent event) {
+		tps.setDisable(false);
+		nbtps.setDisable(false);
+		txtnbtps.setDisable(false);
+		incomplet.setDisable(true);
+		nbincomplet.setDisable(true);
+		txtnbincomplet.setDisable(true);
+		nbdecouvert.setDisable(true);
+		solution.setDisable(true);		
 	}
 }
